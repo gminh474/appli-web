@@ -1,0 +1,13 @@
+{
+  "name": "appli-web",
+  "version": "1.0.0",
+  "description": "Application web",
+  "scripts": {
+    "start": "browser-sync start --server --files . --port 8080"
+  },
+  "author": "Jim Etevenard / OXiane",
+  "license": "Copyright",
+  "devDependencies": {
+    "browser-sync": "^2.27.7"
+  }
+}

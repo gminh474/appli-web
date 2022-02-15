@@ -1,0 +1,68 @@
+:root{
+  --bleu-oxiane: #2155aa;
+  --orange-oxiane: #dd6915;
+}
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.page {
+    display: flex;
+    min-height: 100vh;
+}
+
+aside,
+main {
+    padding: 30px;
+}
+
+aside {
+    background-color: var(--bleu-oxiane);
+    flex-basis: 250px;
+    flex-shrink: 0;
+}
+
+aside ul {
+    padding: 0;
+    list-style: none;
+}
+
+aside li {
+    padding: 5px;
+}
+
+aside a,
+aside a:visited {
+    font-size: 1.1rem;
+    color: white;
+    text-decoration: none;
+}
+
+aside a:hover,
+aside a:active {
+    color: var(--orange-oxiane);
+}
+
+h1,
+h2,
+h3 {
+    color: var(--bleu-oxiane);
+    position: relative;
+}
+
+h1:after,
+h2:after,
+h3:after {
+    content: '';
+    
+    height: 2px;
+    width: 50px;
+    left: 0;
+    bottom: -5px;
+    
+    background-color: var(--orange-oxiane);
+    position: absolute;
+}
