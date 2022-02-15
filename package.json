@@ -3,11 +3,13 @@
   "version": "1.0.0",
   "description": "Application web",
   "scripts": {
+    "test": "mocha",
     "start": "browser-sync start --server --files . --port 8080"
   },
   "author": "Jim Etevenard / OXiane",
   "license": "Copyright",
   "devDependencies": {
-    "browser-sync": "^2.27.7"
+    "browser-sync": "^2.27.7",
+    "mocha": "^9.2.0"
   }
 }
