@@ -1,30 +1,25 @@
 /**
- * Lance la requete pour récupérer la liste des formations
+ * Liste des formations à ajouter au menu
+ * 
+ * Placée ici pour permettre le lancement simple du fichier via `file://`
  */
-function makeRequest() {
-    httpRequest = new XMLHttpRequest();
-
-    httpRequest.onreadystatechange = function(){
-        if (httpRequest.readyState === XMLHttpRequest.DONE) {
-            if (httpRequest.status === 200)
-                addToMenu(httpRequest.responseText);
-        }
-    };
-    httpRequest.open('GET', 'formations.json');
-    httpRequest.send();
-}
+ listeFormations = [
+    "Git et GitLab",
+    "GitLab CI-CD",
+    "Docker",
+    "Kubernetes"
+];
 
 /**
- * Fonction d'jout des formations au menu
+ * Fonction d'ajout des formations au menu
  * 
- * @param {*} jsonString 
  */
-function addToMenu(jsonString) {
-    const formations = JSON.parse(jsonString);
-    const menu = document.getElementById('menu-formations');
+function addToMenu() {
+    menu = document.getElementById('menu-formations');
 
-    formations.forEach(f => {
-        // Libellé de la formation - avec ajout du préfixe
+    listeFormations.forEach(f => {
+        // Libellé de la formation - avec ajout du préfixe 'OX'
+        // La fonction `prefix()` est définie dans le fichier `js/prefixer.js`
         let label = prefix('OX', f);
 
         let item = document.createElement('li');
@@ -34,6 +29,6 @@ function addToMenu(jsonString) {
 }
 
 /**
- * Lancement de lla requete à la fin du chargement.
+ * Lancement de la fonction addToMenu à la fin du chargement.
  */
-window.onload = makeRequest;
+window.onload = addToMenu;
