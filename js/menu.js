@@ -1,7 +1,10 @@
 /**
  * Liste des formations à ajouter au menu
- * 
  * Placée ici pour permettre le lancement simple du fichier via `file://`
+ * 
+ * Cette variable est globale, et déclarée sans mot-clé.
+ * Ce n'est pas une bonne pratique, et déclenchera sans doute
+ * une Issue lors d'une analyse par SonarQube...
  */
  listeFormations = [
     "Git et GitLab",
