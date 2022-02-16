@@ -1,0 +1,6 @@
+image: node:14
+
+test unitaires:
+  script:
+    - npm install
+    - npm test
