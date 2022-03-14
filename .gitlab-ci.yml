@@ -1,12 +1,18 @@
 image: node:14
 
+
+
+création du package:
+    stage: build
+    # Remarque : ce job génère un livrable, le fichier appli-web-1.0.0.tgz
+    # Il sera sans doute utile d'utiliser le mot-clé artifact pour le récupérer
+    # et le mettre à disposition des jobs postérieurs...
+    script:
+    - npm install
+    - npm pack
+
 tests unitaires:
   script:
     - npm install
     - npm test
 
-création du package:
-    stage: build
-    script:
-    - npm install
-    - npm pack
