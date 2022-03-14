@@ -4,3 +4,8 @@ tests unitaires:
   script:
     - npm install
     - npm test
+
+création du package:
+    script:
+    - npm install
+    - npm pack

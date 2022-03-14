@@ -1,5 +1,5 @@
 FROM nginx
 
-COPY index.html /usr/share/nginx/html/
-COPY style.css /usr/share/nginx/html/
-COPY js/*.js /usr/share/nginx/html/js/
+COPY *.tgz /usr/share/nginx/html/
+
+RUN cd /usr/share/nginx/html/ && tar -xvf *.tgz && mv package/* .
