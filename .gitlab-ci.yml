@@ -6,6 +6,7 @@ tests unitaires:
     - npm test
 
 création du package:
+    stage: build
     script:
     - npm install
     - npm pack
